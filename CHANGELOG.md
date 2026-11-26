@@ -11,6 +11,8 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-26
+
 ### Added
 
 - `VERSIONING.md`: artifacts and their version sources, SemVer rules per artifact type, pre-release
@@ -24,7 +26,7 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 First public release, published as commit `3420555` of `github.com/eiraman/community` during the
 restricted launch of 25 November 2026. It was not tagged; the version number was assigned afterwards
-(VERSIONING.md). All documents are drafts, not yet in force.
+(VERSIONING.md). The tag `v0.1.0` will be applied retroactively to that commit. All documents are drafts, not yet in force.
 
 ### Added
 
@@ -47,4 +49,5 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
   exist yet; it passed when re-run.
 
 [Unreleased]: https://github.com/eiraman/community/compare/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27...main
+[0.2.0]: https://github.com/eiraman/community/compare/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27...main
 [0.1.0]: https://github.com/eiraman/community/tree/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27

@@ -25,16 +25,16 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 |---|---|---|---|
 | The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.1` |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
-| Extended Framework | `framework` | `CHANGELOG.md` | `0.1.0` |
+| Extended Framework | `framework` | `CHANGELOG.md` | `0.1.1` |
 | Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.1.0` (all 40) |
 | AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.3.0` |
 | Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.1.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.1.0` |
-| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.1.0` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.4.0` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.1.1` |
+| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.2.0` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.4.1` |
 | Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.4.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.1.0` |
-| Organisation defaults | `.github` | `CHANGELOG.md` | `0.1.0` |
+| Community documents | `community` | `CHANGELOG.md` | `0.2.0` |
+| Organisation defaults | `.github` | `CHANGELOG.md` | `0.1.1` |
 
 Notes:
 
@@ -105,8 +105,9 @@ one version.
 | MINOR | Content changes: pages, texts, images, kit content, a bundled artifact with a new MINOR or MAJOR |
 | PATCH | Fixes: typos, broken links, layout or hosting fixes, a bundled artifact with a new PATCH |
 
-MAJOR is not used while the site and the kit are at `0.y.z`. A redeployment with no change to any served
-file except a corrected `manifest.json` is not a new version.
+MAJOR is not used while the site and the kit are at `0.y.z`. A change to the metadata of `manifest.json`
+alone, with no other served file changed, is a PATCH of the site; the kit keeps its version when its bytes
+do not change.
 
 ### 2.5 Community documents and organisation defaults
 
@@ -148,9 +149,10 @@ and were tagged separately. Where that happens, the secondary artifacts are **no
 Role Profiles, the AI Coordinator profile and the Digital Seniority map are released with a registry
 tag, and the kit with a site tag. Their versions are read from their version source at that tag.
 
-Tags are annotated, made on the exact commit the scope review examined, and signed once the signing keys
-of the project are set up (GOVERNANCE §7). A published tag is never moved or deleted; a mistake is fixed
-by a new version. The releases of 25 November 2026 were published as commits without tags; each changelog
+Tags are signed, as GOVERNANCE §7 requires, made on the exact commit the scope review examined, and
+accompanied by the manifest of file fingerprints. Until the project signing key exists they are annotated
+but unsigned (§6, Known deviations). A published tag is never moved or deleted; a mistake is fixed by a
+new version. The releases of 25 November 2026 were published as commits without tags; each changelog
 gives their commit.
 
 ## 5. How versions refer to each other
@@ -165,14 +167,14 @@ gives their commit.
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |
 
-Example, the site manifest for 0.4.0 as built from the public repository:
+Example, the site manifest for 0.4.1 as built from the public repository:
 
 ```json
-"version": "0.4.0",
+"version": "0.4.1",
 "kit": {
   "path": "kit/eiraman-kit.zip",
   "version": "0.4.0",
-  "bundled": {"guide": null, "specification": null, "registry": "0.1.0",
+  "bundled": {"guide": null, "specification": null, "registry": "0.1.1",
               "ai_coordinator_profile": "0.3.0", "tools": null}
 }
 ```
@@ -191,5 +193,6 @@ to the SHA and in the changelog.
 |---|---|
 | The site was redeployed on 25 November 2026 with new content under the label 0.3.0, several times before the launch and once at the launch | The launch content is version 0.4.0; the earlier republications are listed under 0.3.0 in the site `CHANGELOG.md` |
 | The Guide was published as "1.0-rc" | Normalised to `1.0.0-rc.1` |
-| No release of 25 November 2026 was tagged | Each changelog gives the published commit; tags start with the next release |
+| No release of 25 November 2026 was tagged | Each changelog gives the published commit; the tag of that version is applied retroactively to it (Guide excepted: `v1.0.0-rc.1` goes on its 26 November 2026 release commit) |
+| Tags are annotated but not signed, while GOVERNANCE §7 requires signed tags with a manifest | Closed when the signing key is set up by the Steward; from then on every tag is signed |
 | The `metodo` field of the profiles still names "Eiraman 0.3" | Updated with the next version of each profile |

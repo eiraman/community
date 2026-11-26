@@ -17,7 +17,7 @@ implies the next.
 | Role | In this checklist |
 |---|---|
 | **AI Coordinator** | Prepares the release: scope, version, changelog, diff report, tag, publication and verification. May be a person in the same role. Never approves its own release |
-| **Independent reviewer** | Checks the scope of the release (step 5). Is not the author of the changes in the release and works without the authors' discussion; a person, or an AI agent other than the executors, with its independence recorded |
+| **Independent reviewer** | Checks the scope of the release and signs it off (step 5). A named person who is not the author of the changes in the release and works without the authors' discussion. No AI system is ever the reviewer of record (GOVERNANCE §1, principle 1). While the project has no reviewers, the Human Manager signs the review off. An AI agent other than the executors MAY prepare the review, with its independence recorded; its findings go to the person who signs |
 | **Human Manager** | Gives the Do to publish (step 6). In Stage 1 this is the Steward. Where GOVERNANCE §7 names a publisher, that person's approval is part of the Do: the Author with a second reviewer for the Guide, a domain reviewer for Role Profiles, templates and the gate checklist |
 
 ## Checklist
@@ -28,7 +28,7 @@ implies the next.
 | 2. Bump the version | AI Coordinator | The version source (VERSIONING §1) carries the new version, chosen by the rules of VERSIONING §2 |
 | 3. Write the changelog entry | AI Coordinator | `[Unreleased]` becomes `[x.y.z] - YYYY-MM-DD`, a new empty `[Unreleased]` is on top, and the entry equals the version source |
 | 4. Run the diff report | AI Coordinator | `tools/release_diff.py` has run from the previous tag to the candidate commit, and the report is saved with the candidate |
-| 5. Independent scope review | Independent reviewer | Every item of the report maps to a changelog entry or an approved decision; outcome recorded |
+| 5. Independent scope review | Independent reviewer (a person; the Human Manager while no reviewers exist) | Every item of the report maps to a changelog entry or an approved decision; outcome signed by the reviewer of record |
 | 6. Do | Human Manager | Explicit approval to publish this candidate commit, recorded with the date |
 | 7. Tag | AI Coordinator | Tag `v<version>` on the reviewed commit |
 | 8. Publish | AI Coordinator | Tag pushed, release notes published, artifact deployed where it has a deployment |
@@ -72,7 +72,8 @@ to the same commit. If the report says that removed lines were capped, run it ag
 ### Step 5. Independent scope review
 
 The reviewer receives the diff report, the changelog entry, the list of approved decisions in scope (RFCs,
-recorded Do) and the candidate commit SHA, and nothing else from the authors. The reviewer checks that the
+recorded Do) and the candidate commit SHA, and nothing else from the authors. An AI agent MAY prepare the
+mapping below; the human reviewer of record checks it and signs the outcome. The reviewer checks that the
 release contains only the changes needed and that nothing is lost between versions:
 
 1. Every file added, removed or renamed maps to a changelog entry or an approved decision.
@@ -86,10 +87,10 @@ release contains only the changes needed and that nothing is lost between versio
 
 **Any deletion that does not map to an entry or decision blocks the release.** An unmapped addition or
 modification goes back to the AI Coordinator, who either adds the missing entry or takes the change out of
-the release; the review then runs again on the new candidate. The reviewer records the outcome (PASS,
-PASS WITH CORRECTIONS, FAIL), the candidate SHA, the items checked and its own independence. If no
-independent reviewer is available, the release stays open with the reason recorded; it is not published
-"pending review".
+the release; the review then runs again on the new candidate. The reviewer of record signs the outcome (PASS,
+PASS WITH CORRECTIONS, FAIL) with the candidate SHA, the items checked, their independence and, if an AI
+agent prepared the review, which agent. If no human can sign the review, the release stays open with the
+reason recorded; it is not published "pending review".
 
 ### Step 6. Do
 
@@ -100,10 +101,14 @@ release stops here. A Do covers this candidate only; a new candidate needs a new
 ### Step 7. Tag
 
 ```sh
-git tag -a v<version> <reviewed-sha> -m "<artifact> <version>"   # -s instead of -a once signing keys exist
+git tag -s v<version> <reviewed-sha> -m "<artifact> <version>"
 ```
 
-The tag goes on the commit that was reviewed and approved, never on a later one. A published tag is never
+GOVERNANCE §7 requires a signed tag with a manifest of file fingerprints; attach the manifest to the
+release. Until the Steward sets up the signing key, tags are annotated (`-a`) and unsigned, a known
+deviation recorded in VERSIONING §6. The tag goes on the commit that was reviewed and approved, never on
+a later one. For a release published before tagging started, the tag goes retroactively on the published
+commit named in the changelog. A published tag is never
 moved or deleted.
 
 ### Step 8. Publish
