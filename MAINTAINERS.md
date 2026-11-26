@@ -56,6 +56,7 @@ A domain without a reviewer cannot publish profiles.
 | Functional Analysis | `<handle>` | `<handle>` | no |
 | Web Design | `<handle>` | `<handle>` | no |
 | Development | `<handle>` | `<handle>` | no |
+| Governance & Assurance | `<handle>` | `<handle>` | no |
 | DevSecOps & Tooling | `<handle>` | `<handle>` | no |
 | Adoption & Evidence | `<handle>` | `<handle>` | no |
 | Translation & Education | `<handle>` | `<handle>` | no |
@@ -66,6 +67,7 @@ A domain without a reviewer cannot publish profiles.
 |---|---|
 | Guide | `<handle>` |
 | Role Profiles / `<family>` | `<handle>` |
+| Role Profiles / `governo` | `<handle>` |
 | Tools | `<handle>` |
 | Site | `<handle>` |
 

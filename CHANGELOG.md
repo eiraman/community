@@ -11,6 +11,34 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-26
+
+Scope: Change Request CR-007 of the method project, implementing RFC 0002
+(`guide/rfcs/0002-governo-family.md`), alternative B, accepted by the Steward, who in Stage 1 is also the
+Author, on 2026-11-26 (Do-S18). The decision was taken before the end of the thirty-day comment period of
+GOVERNANCE §10, a deviation recorded in the RFC. Version bump: MINOR, because a working group and its rules
+are added (VERSIONING §2.1).
+
+### Added
+
+- `WORKING-GROUPS.md` §3: the family group **Governance & Assurance**, owner of the whole `governo/` family
+  (the family file and the seven profiles), with its scope, artifacts, reviewer rule (it never publishes;
+  each `revisore-<domain>` is co-reviewed and published by the reviewers of record of its domain;
+  `revisore-ai` and the family file by Test & Quality, provisionally; changes to FAMIGLIA §A–§C also need lazy
+  consensus of the six domain groups; four eyes across both groups) and entry criteria.
+- `WORKING-GROUPS.md` §2: each domain group owns the co-review and publication of its AI reviewer profile in
+  `governo/`; Test & Quality also `revisore-ai` and `governo/FAMIGLIA.md`, provisionally.
+- `WORKING-GROUPS.md` §5: open point, no domain of GOVERNANCE §4.5 owns the method's oversight roles.
+- `MAINTAINERS.md`: a "Working group leads" row for Governance & Assurance and a "Maintainers by area" row
+  for `Role Profiles / governo`, both placeholders.
+
+### Changed
+
+- `PATHWAYS.md`: the existing families include Governance (Governance & Assurance); the registry count is 47
+  profiles in 8 families (it said 40 in 7).
+- `VERSIONING.md` version table, to the versions of this release (Wave GOV-01): registry `0.4.2`, site
+  `0.8.0`, kit `0.7.1`, community documents `0.4.0`.
+
 ## [0.3.0] - 2026-11-26
 
 Scope: Change Requests CR-005 and CR-006 of the method project. Version bump: MINOR, because
@@ -92,7 +120,8 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.3.0...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.4.0...main
+[0.4.0]: https://github.com/eiraman/community/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/eiraman/community/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/eiraman/community/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/eiraman/community/compare/v0.1.0...v0.2.0

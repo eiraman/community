@@ -21,7 +21,7 @@ Every pathway ends in the same progression to reviewer and maintainer (§9).
 
 - *Spec 0.3 §n* is the Italian working specification, the historical source until the English Eiraman Guide v1.0 replaces it. Guide section numbers will be added when the Guide table of contents is published.
 - *GOV*, *CON*, *WG*, *SEC* are [GOVERNANCE.md](GOVERNANCE.md), [CONTRIBUTING.md](https://github.com/eiraman/.github/blob/main/CONTRIBUTING.md), [WORKING-GROUPS.md](WORKING-GROUPS.md) and [SECURITY.md](https://github.com/eiraman/.github/blob/main/SECURITY.md).
-- *Registry* is the Role Profile registry (repository `role-profiles`). It currently has 40 profiles in 7 families, all in state *draft* ("bozza non qualificata"), and the folder names are still in Italian. The English names (`PROFILE.md`, `profile.json`, `FAMILY.md`) are an open point owned by DevSecOps & Tooling (WG §5).
+- *Registry* is the Role Profile registry (repository `role-profiles`). It currently has 47 profiles in 8 families, all in state *draft* ("bozza non qualificata"), and the folder names are still in Italian. The English names (`PROFILE.md`, `profile.json`, `FAMILY.md`) are an open point owned by DevSecOps & Tooling (WG §5).
 - **Applicability levels are 0, 1 and 2** (Spec 0.3 §10). Level 0 is personal use, level 1 an internal team, level 2 external users. "Raising applicability" means making levels 1 and 2 reachable with evidence and keeping level 0 safe.
 
 ## Rules that apply to every pathway
@@ -58,7 +58,7 @@ Role Profiles hold the specialist competence of the method. An agent becomes an 
 **Entry point.**
 - Read Spec 0.3 §9 (contents of a profile and maintenance rules), the Registry README (generation rules 1–6) and CON §4 (path and profile states).
 - Copy the template folder `_modello/` into `<family>/<profile-id>/` and run the validator before asking for review.
-- For an **existing family** (Azure, AWS, Databricks, FinOps, Functional Analysis, Web Design, Development), open a *new Role Profile* or *profile change* issue in that family group.
+- For an **existing family** (Azure, AWS, Databricks, FinOps, Functional Analysis, Web Design, Development, Governance (Governance & Assurance)), open a *new Role Profile* or *profile change* issue in that family group.
 - For a **new family**, open an *RFC proposal*. WG §3 asks for: scope, the first three profiles planned, a lead and a deputy, and the publishing domain. Candidate families:
 
 | Candidate family | Likely publishing domain (proposal) | Points to settle in the RFC |

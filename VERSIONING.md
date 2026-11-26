@@ -29,11 +29,11 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 | Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.1.0` (44 profiles, plus the templates business-analyst and user-persona), `0.2.0` (analista-funzionale, facilitatore-design-thinking, utente-simulato) |
 | AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.4.2` |
 | Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.1.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.4.1` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.4.2` |
 | Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.2.3` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.7.0` |
-| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.7.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.3.0` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.8.0` |
+| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.7.1` |
+| Community documents | `community` | `CHANGELOG.md` | `0.4.0` |
 | Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
 
 Notes:
