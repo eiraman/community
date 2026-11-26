@@ -34,7 +34,7 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 | Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.4.1` |
 | Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.4.0` |
 | Community documents | `community` | `CHANGELOG.md` | `0.2.0` |
-| Organisation defaults | `.github` | `CHANGELOG.md` | `0.1.1` |
+| Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.0` |
 
 Notes:
 

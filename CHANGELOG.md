@@ -48,6 +48,6 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27...main
-[0.2.0]: https://github.com/eiraman/community/compare/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27...main
-[0.1.0]: https://github.com/eiraman/community/tree/34205557838a8fcd7a6398c8e2ae1cc4e37a5a27
+[Unreleased]: https://github.com/eiraman/community/compare/v0.2.0...main
+[0.2.0]: https://github.com/eiraman/community/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/eiraman/community/releases/tag/v0.1.0
