@@ -11,6 +11,17 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-11-26
+
+Scope: Change Request CR-010 of the method project. Version bump: PATCH, the version table only.
+
+### Changed
+
+- `VERSIONING.md` version table, to the PATCH releases that follow the independent re-review of Wave CONS-01:
+  Extended Framework `0.2.1`, registry `0.6.1` with its per-profile versions (`0.2.1` for revisore-ai, `0.3.1`
+  for facilitatore-design-thinking), AI Coordinator profile `0.5.1`, tools `0.3.2`, site `0.8.1`, kit `0.8.1`,
+  community documents `0.4.1`. Order of publication: this release goes last, after the releases it lists.
+
 ## [0.4.0] - 2026-11-26
 
 Scope: Change Request CR-007 of the method project, implementing RFC 0002
@@ -125,7 +136,8 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.4.0...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.4.1...main
+[0.4.1]: https://github.com/eiraman/community/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/eiraman/community/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/eiraman/community/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/eiraman/community/compare/v0.2.0...v0.2.1
