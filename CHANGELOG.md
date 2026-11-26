@@ -11,6 +11,17 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.4.2] - 2026-11-26
+
+Scope: Change Requests CR-011 and CR-012 of the method project. Version bump: PATCH, the version table only.
+
+### Changed
+
+- `VERSIONING.md` version table: registry `0.8.0` with its per-profile versions (`0.3.0` for revisore-ai,
+  `0.5.0` for facilitatore-design-thinking), AI Coordinator profile `0.7.0`, site `0.9.0`, kit `0.9.0`,
+  community documents `0.4.2`. Registry `0.7.0` was published between `0.6.1` and `0.8.0` and was never
+  listed here. Order of publication: this release goes last, after the releases it lists.
+
 ## [0.4.1] - 2026-11-26
 
 Scope: Change Request CR-010 of the method project. Version bump: PATCH, the version table only.
@@ -136,7 +147,8 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.4.1...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.4.2...main
+[0.4.2]: https://github.com/eiraman/community/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/eiraman/community/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/eiraman/community/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/eiraman/community/compare/v0.2.1...v0.3.0
