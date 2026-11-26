@@ -11,6 +11,14 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-26
+
+### Changed
+
+- `VERSIONING.md` version table: The Eiraman Guide `1.0.0-rc.2`, Role Profiles registry `0.2.0`, AI Coordinator
+  profile `0.4.0`, community documents `0.2.1`, and the per-profile versions after the registry release `0.2.0`. Version strings only; no
+  rule changes.
+
 ## [0.2.0] - 2026-11-26
 
 ### Added
@@ -48,6 +56,7 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.2.0...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.2.1...main
+[0.2.1]: https://github.com/eiraman/community/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/eiraman/community/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/eiraman/community/releases/tag/v0.1.0
