@@ -23,16 +23,16 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 
 | Artifact | Repository | Version source | Current version |
 |---|---|---|---|
-| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.2` |
+| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.3` |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
-| Extended Framework | `framework` | `CHANGELOG.md` | `0.1.2` |
-| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.1.0` (44 profiles, plus the templates business-analyst and user-persona), `0.2.0` (analista-funzionale, facilitatore-design-thinking, utente-simulato) |
-| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.4.2` |
-| Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.1.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.4.2` |
-| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.2.3` |
+| Extended Framework | `framework` | `CHANGELOG.md` | `0.2.0` |
+| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.0` (45 profiles, plus the templates business-analyst and user-persona), `0.3.0` (analista-funzionale, facilitatore-design-thinking, utente-simulato) |
+| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.5.0` |
+| Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.2.0` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.6.0` |
+| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.3.1` |
 | Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.8.0` |
-| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.7.1` |
+| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.8.0` |
 | Community documents | `community` | `CHANGELOG.md` | `0.4.0` |
 | Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
 
@@ -169,7 +169,7 @@ gives their commit.
 | Site | Kit | `kit.version` in `manifest.json` |
 | `role-profiles` CI | Tools | `TOOLS_REF` in `validate-profiles.yml`, the full commit SHA of a tools release |
 | `tools` and `site` CI | Registry | `PROFILES_REF` in `tests.yml` and `site-build.yml`, the full commit SHA of a registry release |
-| Each Role Profile | Method | Field `metodo` of `profilo.json` (today "Eiraman 0.3"; updated with the next version of each profile) |
+| Each Role Profile | Method | Field `metodo` of `profilo.json` (since registry 0.6.0: "Eiraman 0.3" and the Guide version the profile follows, today 1.0.0-rc.3) |
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |
 
@@ -201,4 +201,4 @@ to the SHA and in the changelog.
 | The Guide was published as "1.0-rc" | Normalised to `1.0.0-rc.1` |
 | No release of 25 November 2026 was tagged | Each changelog gives the published commit; the tag of that version is applied retroactively to it (Guide excepted: `v1.0.0-rc.1` goes on its 26 November 2026 release commit) |
 | Tags are annotated but not signed, while GOVERNANCE §7 requires signed tags with a manifest | Closed when the signing key is set up by the Steward; from then on every tag is signed |
-| The `metodo` field of the profiles still names "Eiraman 0.3" | Updated with the next version of each profile |
+| The `metodo` field of the profiles named only "Eiraman 0.3" | Closed with registry 0.6.0: every profile names the Guide version it follows alongside the specification 0.3 |

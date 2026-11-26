@@ -34,10 +34,15 @@ are added (VERSIONING §2.1).
 
 ### Changed
 
-- `PATHWAYS.md`: the existing families include Governance (Governance & Assurance); the registry count is 47
+- `PATHWAYS.md`: the existing families include Governance (Governance & Assurance); the registry count is 48
   profiles in 8 families (it said 40 in 7).
-- `VERSIONING.md` version table, to the versions of this release (Wave GOV-01): registry `0.4.2`, site
-  `0.8.0`, kit `0.7.1`, community documents `0.4.0`.
+- `VERSIONING.md` version table, to the versions released together with this one (Waves GOV-01 and CONS-01,
+  Change Request CR-010): The Eiraman Guide `1.0.0-rc.3`, Extended Framework `0.2.0`, per-profile versions of
+  registry `0.6.0` (`0.2.0` for 45 profiles and the two templates, `0.3.0` for three), AI Coordinator profile
+  `0.5.0`, Digital Seniority map `0.2.0`, registry `0.6.0`, tools `0.3.1`, site `0.8.0`, kit `0.8.0`,
+  community documents `0.4.0`. The Guide row still said `1.0.0-rc.2` after the Guide release of 26 November.
+- `VERSIONING.md` §5 and §6: the field `metodo` of the profiles names the Guide version each profile follows,
+  since registry 0.6.0; the known deviation on that field is closed.
 
 ## [0.3.0] - 2026-11-26
 
