@@ -25,16 +25,16 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 |---|---|---|---|
 | The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.2` |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
-| Extended Framework | `framework` | `CHANGELOG.md` | `0.1.1` |
-| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.1.0` (37 profiles, plus revisore-ai and the templates business-analyst and user-persona), `0.2.0` (analista-funzionale, facilitatore-design-thinking, utente-simulato) |
-| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.4.0` |
+| Extended Framework | `framework` | `CHANGELOG.md` | `0.1.2` |
+| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.1.0` (44 profiles, plus the templates business-analyst and user-persona), `0.2.0` (analista-funzionale, facilitatore-design-thinking, utente-simulato) |
+| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.4.2` |
 | Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.1.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.2.0` |
-| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.2.0` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.4.1` |
-| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.4.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.2.1` |
-| Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.0` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.4.1` |
+| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.2.3` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.7.0` |
+| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.7.0` |
+| Community documents | `community` | `CHANGELOG.md` | `0.3.0` |
+| Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
 
 Notes:
 
@@ -43,6 +43,12 @@ Notes:
   the same version.
 - **AI Coordinator profile.** Its number, 0.3.0, was set when it followed the specification 0.3. From now
   on it changes by the profile rules below, independently of the Guide.
+- **Changes outside the versioned text.** In `guide`, whose version source is the title block of
+  `EIRAMAN-GUIDE.md`, a change that leaves the released texts unchanged, such as a CI workflow or repository
+  metadata, does not change the Guide version and is not tagged: it is listed under `[Unreleased]` in the
+  guide `CHANGELOG.md` and released with the next Guide version. In the repositories whose version source
+  is `CHANGELOG.md` (`framework`, `community`, `.github`, `role-profiles`), the repository is the artifact,
+  so such a change is a PATCH of the repository.
 - **Kit.** Its own line starts at 0.4.0: the kit's licence notice already calls the earlier copies
   "versions up to 0.3.x", which were served with site 0.3.x. From 0.4.0 on, the kit changes only when its
   content changes, whatever happens to the site pages.

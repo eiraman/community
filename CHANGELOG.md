@@ -11,6 +11,40 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-26
+
+Scope: Change Requests CR-005 and CR-006 of the method project. Version bump: MINOR, because
+`RELEASING.md` adds obligations (VERSIONING §2.1).
+
+### Added
+
+- `RELEASING.md`, step 4 (now "Run the diff report and the CI checks locally"): the AI Coordinator MUST run
+  the checks of the repository's `compliance.yml` locally on the candidate commit before the scope review,
+  and again before the tag (step 7): secrets, local paths, e-mail addresses, the deny-list through the local
+  deny file, and REUSE where the workflow has it, plus the DCO sign-off and the repository's other test
+  workflows. Outputs are saved with the candidate; a failing check blocks the release; a check that cannot
+  run locally (for example `reuse` or `trufflehog` not installed) is recorded as not run, with the reason,
+  and goes to the reviewer and to the Human Manager as a point not verified.
+- `RELEASING.md`, step 5: the independent reviewer, or the agent preparing the review, MUST re-run the
+  local CI checks on the candidate commit and compare them with the AI Coordinator's record. The roles
+  table and the checklist rows of steps 4, 5 and 7 say the same.
+- `VERSIONING.md` §1, notes: a change in `guide` that leaves the released texts unchanged (CI workflows,
+  repository metadata) does not change the Guide version and is not tagged; it waits under `[Unreleased]`.
+  In repositories whose version source is `CHANGELOG.md`, such a change is a PATCH.
+
+### Changed
+
+- `VERSIONING.md` version table, to the versions of this release (Wave REL-07): Extended Framework `0.1.2`,
+  per-profile versions of registry `0.4.1`, AI Coordinator profile `0.4.2`, registry `0.4.1`, tools `0.2.3`,
+  site and kit `0.7.0`, community documents `0.3.0`, organisation defaults `0.2.1`.
+
+### Fixed
+
+- CI, `compliance.yml`: the local-path check removes http(s) URLs from the matched lines and matches
+  again, so a path segment inside a URL (such as `/home/` in an official ISO URL) is no longer flagged.
+  The block is the one of `role-profiles` v0.4.1 (the whole workflow file is now identical to that one). Change Requests CR-005 and CR-006 of the
+  method project.
+
 ## [0.2.1] - 2026-11-26
 
 ### Changed
@@ -56,7 +90,8 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.2.1...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.3.0...main
+[0.3.0]: https://github.com/eiraman/community/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/eiraman/community/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/eiraman/community/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/eiraman/community/releases/tag/v0.1.0
