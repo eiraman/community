@@ -30,7 +30,7 @@ implies the next.
 | 4. Run the diff report and the CI checks locally | AI Coordinator | `tools/release_diff.py` has run from the previous tag to the candidate commit; the checks of the repository's `compliance.yml` have run locally on the candidate commit and passed, or the ones that could not run are recorded; both outputs are saved with the candidate |
 | 5. Independent scope review | Independent reviewer (a person; the Human Manager while no reviewers exist) | The local CI checks have been re-run independently on the candidate commit; every item of the report maps to a changelog entry or an approved decision; outcome signed by the reviewer of record |
 | 6. Do | Human Manager | Explicit approval to publish this candidate commit, recorded with the date |
-| 7. Tag | AI Coordinator | Tag `v<version>` on the reviewed commit, whose local CI checks passed |
+| 7. Tag | AI Coordinator | Tag `v<version>` on the reviewed commit, whose local CI checks passed or are recorded as not run |
 | 8. Publish | AI Coordinator | Tag pushed, release notes published, artifact deployed where it has a deployment |
 | 9. Verify | AI Coordinator | What is online matches what was reviewed, checked from outside |
 
@@ -89,7 +89,10 @@ The output of each check is saved with the candidate, beside the diff report, wi
 date. A failing check blocks the release as it would block a merge. If a check cannot run locally, for
 example because `reuse` or `trufflehog` is not installed, the record names the check, the reason and the
 substitute used, if any; that check counts as not run, not as passed, and is listed among the points not
-verified that go to the reviewer and to the Human Manager with the Do (step 6).
+verified that go to the reviewer and to the Human Manager with the Do (step 6). A check recorded as not run
+does not block the tag, provided that the CI runs it on the pushed commit; the point stays open until the CI
+result is known (GOVERNANCE §1.3), and a CI failure is corrected by a PATCH release. If the AI Coordinator's
+results and the reviewer's re-run differ, the tag is blocked until the difference is explained and recorded.
 
 ### Step 5. Independent scope review
 

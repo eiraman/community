@@ -37,6 +37,8 @@ Scope: Change Requests CR-005 and CR-006 of the method project. Version bump: MI
 - `VERSIONING.md` version table, to the versions of this release (Wave REL-07): Extended Framework `0.1.2`,
   per-profile versions of registry `0.4.1`, AI Coordinator profile `0.4.2`, registry `0.4.1`, tools `0.2.3`,
   site and kit `0.7.0`, community documents `0.3.0`, organisation defaults `0.2.1`.
+- `RELEASING.md`: a check recorded as not run does not block the tag if the CI runs it on the pushed commit;
+  diverging results between the AI Coordinator and the reviewer block the tag (Do-S17).
 
 ### Fixed
 
