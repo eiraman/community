@@ -213,6 +213,8 @@ A contributor may appeal a working group decision to the SC (Steward in Stage 1)
 - The Guide is published by the Author, with a second reviewer who is not the author of the included changes.
 - Release notes separate: what changed, which RFCs were accepted, which profiles were qualified, requalified or suspended.
 
+Reference: the release checklist is in [RELEASING.md](RELEASING.md), and version numbers and tags follow [VERSIONING.md](VERSIONING.md).
+
 ## 8. Conflict of interest
 
 - Every role holder keeps a public declaration of employer and of commercial interests related to Eiraman (consulting, training, tools, certification, vendors of products covered by Role Profiles).

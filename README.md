@@ -16,6 +16,9 @@ How the Eiraman project is run, and how to take part. Status: **draft**, not yet
 | [CASE-STUDY-TEMPLATE.md](CASE-STUDY-TEMPLATE.md) | Template for adopters' case studies, filed in [`cases/`](cases/) |
 | [LICENSING.md](LICENSING.md) | Which licence covers which material, and how to attribute |
 | [TRADEMARK.md](TRADEMARK.md) | How the Eiraman name and logo may be used |
+| [VERSIONING.md](VERSIONING.md) | Where each artifact's version is written, what each number means, tags |
+| [RELEASING.md](RELEASING.md) | Release checklist, with the independent scope review |
+| [CHANGELOG.md](CHANGELOG.md) | Changes to these documents per release |
 | [`meetings/`](meetings/) | Public notes of working group and Steering Committee meetings |
 
 Contributing guide, code of conduct and security policy are the organisation defaults in
