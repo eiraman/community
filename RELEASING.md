@@ -47,8 +47,8 @@ implies the next.
 - Update every place that repeats the version: for a Role Profile, both `profilo.json` and `PROFILO.md`;
   for the tools, `__version__` in every tool (a test checks this); for the site, `SITE_VERSION` and, if the
   kit changed, `KIT_VERSION`.
-- Update pinned references that the release changes (`TOOLS_REF`, `PROFILES_REF`), with the released
-  version in a comment next to the SHA.
+- Update pinned references that the release changes (`TOOLS_REF`; `PROFILES_REF` in the tests of `tools`;
+  for the site, `profiles.ref`), with the released version in a comment next to the SHA.
 
 ### Step 3. Write the changelog entry
 
@@ -143,7 +143,10 @@ moved or deleted.
 
 - Push the tag and create the release notes from the changelog entry.
 - Deploy where the artifact has a deployment. For the site: build twice from the tagged commit, with the
-  same inputs; the two manifests must be identical; upload the changed files and the manifest.
+  same inputs; the two manifests must be identical; upload the changed files and the manifest. The registry
+  given to the build (`EIRAMAN_PROFILES`) must be a detached worktree at the commit in `profiles.ref`
+  (`git -C ../role-profiles worktree add --detach <folder> <sha>`); the build fails on any other checkout. A
+  build made with `EIRAMAN_PROFILES_UNPINNED=1` is for development and is never published.
 - Publication follows the scope of the Do. Anything else waits for its own release.
 
 ### Step 9. Verify
@@ -151,7 +154,8 @@ moved or deleted.
 - The remote tag points at the reviewed SHA (`git ls-remote --tags origin v<version>`).
 - For the site: download every file listed in the online `manifest.json` over HTTPS and compare its SHA-256
   with the manifest; all must match. The manifest `version` and `kit.version` are the released ones, and
-  the kit fingerprint in the start prompt equals the fingerprint of the served zip.
+  the kit fingerprint in the start prompt equals the fingerprint of the served zip. The manifest
+  `registry_commit` equals the SHA in `profiles.ref` of the tagged commit, and `publishable` is `true`.
 - Record the outcome, with the three states kept separate: technical state, acceptance, publication. If
   verification fails, the AI Coordinator reports it to the Human Manager and restores the previous
   release, or fixes it in a new PATCH release.

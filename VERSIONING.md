@@ -32,9 +32,9 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 | Local engines map | `role-profiles`, `_seniority/` | Field `versione` of `motori-locali.json` | `0.1.0` |
 | Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.10.0` |
 | Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.3.2` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.10.0` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.10.2` |
 | Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.9.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.4.3` |
+| Community documents | `community` | `CHANGELOG.md` | `0.5.0` |
 | Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
 
 Notes:
@@ -169,7 +169,8 @@ gives their commit.
 | Kit | Guide, specification, registry, AI Coordinator profile, tools | `kit.bundled` in the site `manifest.json`, written by the build from the version sources |
 | Site | Kit | `kit.version` in `manifest.json` |
 | `role-profiles` CI | Tools | `TOOLS_REF` in `validate-profiles.yml`, the full commit SHA of a tools release |
-| `tools` and `site` CI | Registry | `PROFILES_REF` in `tests.yml` and `site-build.yml`, the full commit SHA of a registry release |
+| `tools` CI | Registry | `PROFILES_REF` in `tests.yml`, the full commit SHA of a registry release |
+| `site` CI and build | Registry | `profiles.ref`, the full commit SHA of a registry release, with the registry version in a comment; read by `site-build.yml` and by `generator/build.py`, which refuses another checkout |
 | Each Role Profile | Method | Field `metodo` of `profilo.json` (since registry 0.6.0: "Eiraman 0.3" and the Guide version the profile follows, today 1.0.0-rc.3 and 1.0.0-rc.5) |
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |

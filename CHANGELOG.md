@@ -11,6 +11,29 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-11-27
+
+Scope: Change Request CR-026 of the method project (community part). Version bump: MINOR, because
+`RELEASING.md` adds a mandatory check to the release procedure (VERSIONING §2.1; as in 0.3.0). It applies from
+site `0.10.2`, the release that introduces `profiles.ref`, the registry check of the build and the manifest
+fields `registry_commit` and `publishable`; publish this release after site `0.10.2`.
+
+### Changed
+
+- `RELEASING.md`, step 2: for the site the pinned registry reference is `profiles.ref`, with the registry
+  version in a comment; `PROFILES_REF` remains in the tests of `tools`, `TOOLS_REF` is unchanged.
+- `RELEASING.md`, step 8: the registry given to the site build is a detached worktree at the commit in
+  `profiles.ref`; another checkout makes the build fail; a build with `EIRAMAN_PROFILES_UNPINNED=1` is never
+  published.
+- `VERSIONING.md` section 5: the reference from `site` to the registry is `profiles.ref`, read by the CI and
+  by the generator; `PROFILES_REF` stays the reference of `tools`.
+- `VERSIONING.md` version table: site `0.10.2` (was `0.10.0`), community documents `0.5.0` (was `0.4.3`).
+
+### Added
+
+- `RELEASING.md`, step 9: for the site, the online manifest `registry_commit` must equal the SHA in
+  `profiles.ref` of the tagged commit and `publishable` must be `true`.
+
 ## [0.4.3] - 2026-11-27
 
 Scope: Change Request CR-025 of the method project. Version bump: PATCH, the version table only; documentation
