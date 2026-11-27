@@ -32,16 +32,14 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 | AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.13.0` |
 | Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.2.1` |
 | Local engines map | `role-profiles`, `_seniority/` | Field `versione` of `motori-locali.json` | `0.1.1` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.11.0` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.11.1` |
 | Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.4.0` |
 | Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.11.0` |
 | Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.10.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.6.0` |
+| Community documents | `community` | `CHANGELOG.md` | `0.6.1` |
 | Organisation defaults | `.github` | `CHANGELOG.md` | `0.3.0` |
 
-The versions of this table are the candidates of the release that targets the Guide 1.0.0-rc.6 (decision D-031): they
-are not released until each artifact is published, and the AI Coordinator confirms them at publication. `community`
-is published after all the other artifacts.
+The versions of this table are those published up to 2026-11-27 and the follow-up releases of the same day: registry 0.11.1 (CI pin only; profile and family versions are those of 0.11.0) and community 0.6.1.
 
 Notes:
 

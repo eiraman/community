@@ -11,6 +11,25 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-11-27
+
+Scope: Change Request CR-032 of the method project (follow-ups of the release Do-S35). Version bump: PATCH, an
+editorial correction with no change of any obligation (VERSIONING §2). **Publish this release after
+`role-profiles` 0.11.1**, which the version table now names.
+
+### Changed
+
+- `VERSIONING.md` section 1: the note under the version table no longer calls the versions candidates that are
+  confirmed at publication; it states that they are the versions published up to 2026-11-27 and the follow-up releases of the same day, with no instruction on timing (the order of publication stays in this changelog only).
+  Two rows follow CR-032: the Role Profiles registry as a whole is `0.11.1` (was `0.11.0`) and the community
+  documents are `0.6.1` (was `0.6.0`). The other rows are verified against the published tags: Guide
+  1.0.0-rc.6, translation 1.0.0-rc.6+it.1, framework 0.3.0, tools 0.4.0, site 0.11.0, kit 0.10.0, `.github`
+  0.3.0, AI Coordinator 0.13.0, Digital Seniority map 0.2.1, local engines map 0.1.1, and the distribution of
+  the profile and family versions of registry 0.11.0.
+- `VERSIONING.md` section 1: the sentence "`community` is published after all the other artifacts" is removed: it
+  described the release of 2026-11-27, which is done; the order that applies to this release is stated above
+  (after `role-profiles` 0.11.1).
+
 ## [0.6.0] - 2026-11-27
 
 Scope: Change Request CR-030 of the method project, work package WP-30D (community part), after decision D-IT-1
