@@ -23,17 +23,18 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 
 | Artifact | Repository | Version source | Current version |
 |---|---|---|---|
-| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.3` |
+| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.5` |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
 | Extended Framework | `framework` | `CHANGELOG.md` | `0.2.1` |
-| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.0` (44 profiles, plus the templates business-analyst and user-persona), `0.3.0` (analista-funzionale, utente-simulato, revisore-ai), `0.5.0` (facilitatore-design-thinking) |
-| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.7.0` |
+| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.0` (35 profiles), `0.3.0` (8 profiles: scrum-master-ai, technical-writer, utente-simulato, finops-forecast-budget, revisore-legale-compliance, revisore-architettura-cloud, revisore-architettura-applicativa-dati, revisore-test-qualita), `0.4.0` (5 profiles: analista-funzionale, revisore-ai, revisore-privacy, revisore-sicurezza, security-officer), `0.7.0` (facilitatore-design-thinking); the 49 profiles are followed by three templates: business-analyst `0.3.0`, user-persona `0.4.0`, `_modello/profilo.json` `0.2.0` |
+| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.12.0` |
 | Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.2.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.8.0` |
+| Local engines map | `role-profiles`, `_seniority/` | Field `versione` of `motori-locali.json` | `0.1.0` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.10.0` |
 | Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.3.2` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.9.0` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.10.0` |
 | Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.9.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.4.2` |
+| Community documents | `community` | `CHANGELOG.md` | `0.4.3` |
 | Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
 
 Notes:
@@ -169,7 +170,7 @@ gives their commit.
 | Site | Kit | `kit.version` in `manifest.json` |
 | `role-profiles` CI | Tools | `TOOLS_REF` in `validate-profiles.yml`, the full commit SHA of a tools release |
 | `tools` and `site` CI | Registry | `PROFILES_REF` in `tests.yml` and `site-build.yml`, the full commit SHA of a registry release |
-| Each Role Profile | Method | Field `metodo` of `profilo.json` (since registry 0.6.0: "Eiraman 0.3" and the Guide version the profile follows, today 1.0.0-rc.3) |
+| Each Role Profile | Method | Field `metodo` of `profilo.json` (since registry 0.6.0: "Eiraman 0.3" and the Guide version the profile follows, today 1.0.0-rc.3 and 1.0.0-rc.5) |
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |
 

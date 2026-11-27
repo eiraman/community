@@ -21,7 +21,7 @@ Every pathway ends in the same progression to reviewer and maintainer (§9).
 
 - *Spec 0.3 §n* is the Italian working specification, the historical source until the English Eiraman Guide v1.0 replaces it. Guide section numbers will be added when the Guide table of contents is published.
 - *GOV*, *CON*, *WG*, *SEC* are [GOVERNANCE.md](GOVERNANCE.md), [CONTRIBUTING.md](https://github.com/eiraman/.github/blob/main/CONTRIBUTING.md), [WORKING-GROUPS.md](WORKING-GROUPS.md) and [SECURITY.md](https://github.com/eiraman/.github/blob/main/SECURITY.md).
-- *Registry* is the Role Profile registry (repository `role-profiles`). It currently has 48 profiles in 8 families, all in state *draft* ("bozza non qualificata"), and the folder names are still in Italian. The English names (`PROFILE.md`, `profile.json`, `FAMILY.md`) are an open point owned by DevSecOps & Tooling (WG §5).
+- *Registry* is the Role Profile registry (repository `role-profiles`). It currently has 49 profiles in 8 families, all in state *draft* ("bozza non qualificata"), and the folder names are still in Italian. The English names (`PROFILE.md`, `profile.json`, `FAMILY.md`) are an open point owned by DevSecOps & Tooling (WG §5).
 - **Applicability levels are 0, 1 and 2** (Spec 0.3 §10). Level 0 is personal use, level 1 an internal team, level 2 external users. "Raising applicability" means making levels 1 and 2 reachable with evidence and keeping level 0 safe.
 
 ## Rules that apply to every pathway

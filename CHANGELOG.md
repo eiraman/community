@@ -11,6 +11,29 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.4.3] - 2026-11-27
+
+Scope: Change Request CR-025 of the method project. Version bump: PATCH, the version table only; documentation
+alignment, no policy change.
+
+### Changed
+
+- `VERSIONING.md` version table, aligned to the versions released in the sibling repositories: Guide
+  `1.0.0-rc.5` (was `1.0.0-rc.3`), registry `0.10.0` (was `0.8.0`), AI Coordinator profile `0.12.0` (was
+  `0.7.0`), site `0.10.0` (was `0.9.0`), community documents `0.4.3` (was `0.4.2`). Extended Framework `0.2.1`,
+  Digital Seniority map `0.2.0`, tools `0.3.2`, kit `0.9.0` and `.github` `0.2.1` were already correct.
+- `VERSIONING.md`, Role Profiles row: the distribution of profile versions follows the registry `0.10.0`
+  (35 profiles at `0.2.0`, 8 at `0.3.0`, 5 at `0.4.0`, facilitatore-design-thinking at `0.7.0`) and names the
+  three templates with their versions.
+- `VERSIONING.md`, section 5 (table, row "Each Role Profile"): the `metodo` field now cites the Guide versions `1.0.0-rc.3` and `1.0.0-rc.5`,
+  both named by the profiles of registry `0.10.0`.
+- `PATHWAYS.md`: the registry profile count is 49 (was 48), as in registry `0.10.0`.
+
+### Added
+
+- `VERSIONING.md` version table: row for the local engines map (`_seniority/motori-locali.json`, `0.1.0`),
+  introduced by registry `0.10.0` and not listed before.
+
 ## [0.4.2] - 2026-11-26
 
 Scope: Change Requests CR-011 and CR-012 of the method project. Version bump: PATCH, the version table only.
