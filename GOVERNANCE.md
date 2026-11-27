@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 Status: **draft**. Not yet in force. Values marked **proposal** are to be decided by the project owner before publication.
 
-English is the canonical language of this document. Translations are informative.
+English is the canonical language of this document, and the English text prevails. Translations of this document are informative. The Eiraman Guide follows its own rule: English is canonical and prevails, and its Italian translation is curated and approved by the Author (decision D-IT-1); translations of the Guide into other languages are informative until the Author approves them as faithful (WORKING-GROUPS §4).
 
 ## 1. Purpose and principles
 

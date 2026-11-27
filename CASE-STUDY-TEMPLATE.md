@@ -7,7 +7,7 @@ SPDX-License-Identifier: CC-BY-4.0
 
 Status: **draft**. Owner: Adoption & Evidence working group.
 
-Use this template to share how Eiraman worked on a real project. Anonymised case studies calibrate the open thresholds of the applicability levels (Spec 0.3 §10, "Punti aperti"). They also count toward the stage thresholds of the project (GOVERNANCE §3).
+Use this template to share how Eiraman worked on a real project. Anonymised case studies calibrate the open thresholds of the applicability levels (Guide §14.1, "Level 1 · Evidence" and "Level 2 · Evidence"). They also count toward the stage thresholds of the project (GOVERNANCE §3).
 
 Submit it with the *Adopter case* issue form. A Privacy reviewer checks every case derived from a real project before it is accepted.
 
@@ -54,7 +54,7 @@ The submitter is responsible for anonymisation. The Privacy reviewer verifies it
 | Gate runs | <at opening, per Wave, at mandate changes: how many> |
 | Class changes during the project | <none, or from-to, why, and the Human Manager's choice> |
 | Level changes | <step-up with dossier, or automatic step-down and the cause> |
-| Partial application | <full method, or the partial conformity declaration: rules applied and not applied (Spec 0.3 §11)> |
+| Partial application | <full method, or the partial conformity declaration: rules applied and not applied (Guide §15, "Partial application")> |
 
 ## 3. Mandate
 
@@ -137,7 +137,7 @@ Technical state and business acceptance are reported separately. A deliverable a
 |---|---|---|---|---|
 | | | | | |
 
-What would you do differently? What should the method change (Spec 0.3 §11, "Ritorno al metodo")?
+What would you do differently? What should the method change (Guide §15, "Feedback into the method")?
 
 ## 11. Submitter confirmations
 

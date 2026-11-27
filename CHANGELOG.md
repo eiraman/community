@@ -11,6 +11,38 @@ on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and versions fo
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-11-27
+
+Scope: Change Request CR-030 of the method project, work package WP-30D (community part), after decision D-IT-1
+of the Human Manager (CR-029). **Breaking:** the Italian translation of the Guide no longer needs the two
+native-speaker reviewers, so an obligation is removed (VERSIONING §2.1). While the artifact is at `0.y.z`, a
+change that would be MAJOR bumps MINOR (VERSIONING §2.6), hence the version bump: MINOR. A new artifact
+version scheme is added. The rule for translations into other languages is unchanged. Applies from the next release of the `guide`
+repository, which carries the translation.
+
+### Added
+
+- `VERSIONING.md`: the Italian translation of the Guide as an artifact (table row and note in section 1),
+  with the scheme `<Guide version>+it.N` (SemVer build metadata; revisions ordered by `N` by convention;
+  restarts at `+it.1` for each Guide version; no tag of its own); the translation in the table of references
+  (section 5); the per-artifact changelogs of the registry from 0.11.0 (D-VER-2, section 2.2).
+
+### Changed
+
+- `PATHWAYS.md`: every operative reference to the specification 0.3 now cites the section of the Guide
+  1.0.0-rc.5; the convention "How to read the references" and the open point on numbering are rewritten.
+  Where the Guide has no counterpart (open points of the levels, the interface for the Human Manager,
+  strategies for local and external requests) the text says so.
+- `PATHWAYS.md` §5, `WORKING-GROUPS.md` §4, `GOVERNANCE.md` (language note): English is canonical and
+  prevails; the Italian translation of the Guide is curated and approved by the Author (D-IT-1);
+  translations into other languages follow the rule of two native-speaker reviewers and are informative
+  until the Author approves them as faithful.
+- `VERSIONING.md` section 5 and example: the field `metodo` of the profiles is "The Eiraman Guide
+  <version>[; §…]"; the manifest records `guide_commit`, `guide_version` and `kit.bundled.guide`/`guide_it`,
+  and the kit no longer carries the specification 0.3.
+- `LICENSING.md`, `TRADEMARK.md`: "Guide v1.0" becomes "the Eiraman Guide" or the version 1.0.0-rc.5.
+- `CASE-STUDY-TEMPLATE.md`: references to the specification 0.3 replaced by sections of the Guide.
+
 ## [0.5.0] - 2026-11-27
 
 Scope: Change Request CR-026 of the method project (community part). Version bump: MINOR, because
@@ -193,7 +225,10 @@ restricted launch of 25 November 2026. It was not tagged; the version number was
 - At the launch, the link check of this repository first failed because the `.github` repository did not
   exist yet; it passed when re-run.
 
-[Unreleased]: https://github.com/eiraman/community/compare/v0.4.2...main
+[Unreleased]: https://github.com/eiraman/community/compare/v0.6.0...main
+[0.6.0]: https://github.com/eiraman/community/compare/v0.5.0...v0.6.0
+[0.5.0]: https://github.com/eiraman/community/compare/v0.4.3...v0.5.0
+[0.4.3]: https://github.com/eiraman/community/compare/v0.4.2...v0.4.3
 [0.4.2]: https://github.com/eiraman/community/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/eiraman/community/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/eiraman/community/compare/v0.3.0...v0.4.0

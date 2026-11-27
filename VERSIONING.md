@@ -24,6 +24,7 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 | Artifact | Repository | Version source | Current version |
 |---|---|---|---|
 | The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.5` |
+| Italian translation of the Guide | `guide`, `translations/it/` | The "Nota alla traduzione" at the top of `EIRAMAN-GUIDE.it.md`; its own changelog is `translations/it/CHANGELOG.md` | none released yet; the first is `1.0.0-rc.5+it.1`, released together with the next release of the `guide` repository |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
 | Extended Framework | `framework` | `CHANGELOG.md` | `0.2.1` |
 | Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.0` (35 profiles), `0.3.0` (8 profiles: scrum-master-ai, technical-writer, utente-simulato, finops-forecast-budget, revisore-legale-compliance, revisore-architettura-cloud, revisore-architettura-applicativa-dati, revisore-test-qualita), `0.4.0` (5 profiles: analista-funzionale, revisore-ai, revisore-privacy, revisore-sicurezza, security-officer), `0.7.0` (facilitatore-design-thinking); the 49 profiles are followed by three templates: business-analyst `0.3.0`, user-persona `0.4.0`, `_modello/profilo.json` `0.2.0` |
@@ -42,6 +43,17 @@ Notes:
 - **Guide.** The first release candidate was published as "1.0-rc"; normalised to SemVer it is
   `1.0.0-rc.1`. Records written before, such as `AUTHOR-RATIFICATION.md`, still say "v1.0-rc" and mean
   the same version.
+- **Italian translation of the Guide.** The Italian text is the curated translation of the Guide, approved by
+  the Author (decision D-IT-1); the English text is canonical and prevails. Its version is the version of
+  the English Guide it translates followed by the build metadata `+it.N` (SemVer 2.0.0, section 10), for
+  example `1.0.0-rc.5+it.1`. `N` is the revision of the translation of that source version, numbered from 1:
+  a fix to the translation of the same source increments `N`, and the translation of a new Guide version
+  restarts at `+it.1`. Build metadata does not take part in SemVer precedence, so the revisions are
+  ordered by `N` by convention, not by SemVer rules, and the translation never ranks above or below its
+  source. The translation has no tag of its own: it is released with a tag of the `guide` repository, and
+  a change of the translation alone leaves the Guide version unchanged (it is listed in the translation's
+  own changelog and in the `[Unreleased]` section of the guide `CHANGELOG.md`). Translations into other
+  languages are not versioned artifacts of the project while they are informative.
 - **AI Coordinator profile.** Its number, 0.3.0, was set when it followed the specification 0.3. From now
   on it changes by the profile rules below, independently of the Guide.
 - **Changes outside the versioned text.** In `guide`, whose version source is the title block of
@@ -91,12 +103,15 @@ GOVERNANCE §4.5.
 The **registry** version takes the largest bump among the changes it releases: removing a profile, or a
 change to `_modello/` or `seniority.json` that makes existing profiles fail the validator, is MAJOR;
 adding a profile or a family, or any profile's MINOR, is MINOR; otherwise PATCH. The Digital Seniority map
-follows the profile rules for its own number.
+follows the profile rules for its own number. The local engines map is versioned in the same way.
 
-**Per-profile change history.** The profile template (`_modello/`) has no change-history section. Adding
-one would change the format every profile follows, which is a format change for the DevSecOps & Tooling
-group. Until then, per-profile versions and their changes are recorded in the registry `CHANGELOG.md`,
-in the "Profile versions" table of each release.
+**Per-artifact change history.** The profile template (`_modello/`) has no change-history section, and
+adding one would change the format every profile follows, which is a format change for the DevSecOps &
+Tooling group. Until registry 0.11.0, per-profile versions and their changes are recorded in the registry
+`CHANGELOG.md`, in the "Profile versions" table of each release. From registry 0.11.0 (decision D-VER-2)
+each artifact of the registry that has a version of its own, as listed in section 1, also has its own
+`CHANGELOG.md` in the registry, next to its version source; the registry `CHANGELOG.md` stays the summary
+of each release and the version source of the registry as a whole.
 
 ### 2.3 Code
 
@@ -154,7 +169,7 @@ Why this scheme rather than prefixed tags such as `guide-v1.0.0-rc.1`:
 Prefixed tags would be needed only if several artifacts with independent versions shared one repository
 and were tagged separately. Where that happens, the secondary artifacts are **not** tagged: individual
 Role Profiles, the AI Coordinator profile and the Digital Seniority map are released with a registry
-tag, and the kit with a site tag. Their versions are read from their version source at that tag.
+tag, the kit with a site tag, and the Italian translation of the Guide with a `guide` tag. Their versions are read from their version source at that tag.
 
 Tags are signed, as GOVERNANCE §7 requires, made on the exact commit the scope review examined, and
 accompanied by the manifest of file fingerprints. Until the project signing key exists they are annotated
@@ -166,31 +181,38 @@ gives their commit.
 
 | From | To | Where |
 |---|---|---|
-| Kit | Guide, specification, registry, AI Coordinator profile, tools | `kit.bundled` in the site `manifest.json`, written by the build from the version sources |
+| Kit | Guide (English and Italian), registry, AI Coordinator profile, tools | `kit.bundled` in the site `manifest.json`, written by the build from the version sources |
 | Site | Kit | `kit.version` in `manifest.json` |
+| Italian translation of the Guide | Guide | The version of the English Guide it translates, in its version string (`<Guide version>+it.N`) and in the "Nota alla traduzione" |
 | `role-profiles` CI | Tools | `TOOLS_REF` in `validate-profiles.yml`, the full commit SHA of a tools release |
 | `tools` CI | Registry | `PROFILES_REF` in `tests.yml`, the full commit SHA of a registry release |
 | `site` CI and build | Registry | `profiles.ref`, the full commit SHA of a registry release, with the registry version in a comment; read by `site-build.yml` and by `generator/build.py`, which refuses another checkout |
-| Each Role Profile | Method | Field `metodo` of `profilo.json` (since registry 0.6.0: "Eiraman 0.3" and the Guide version the profile follows, today 1.0.0-rc.3 and 1.0.0-rc.5) |
+| Each Role Profile | Method | Field `metodo` of `profilo.json`: "The Eiraman Guide <version>", optionally followed by "; §…" with the sections of the Guide the profile applies, for example "The Eiraman Guide 1.0.0-rc.5; §11" (from registry 0.11.0; the specification 0.3 is no longer named) |
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |
 
-Example, the site manifest for 0.4.1 as built from the public repository:
+Example, the fields of the site manifest that name other artifacts (values are illustrative):
 
 ```json
-"version": "0.4.1",
+"guide_commit": "<commit of the guide repository the build used>",
+"guide_version": "1.0.0-rc.5",
 "kit": {
   "path": "kit/eiraman-kit.zip",
-  "version": "0.4.0",
-  "bundled": {"guide": null, "specification": null, "registry": "0.1.1",
-              "ai_coordinator_profile": "0.3.0", "tools": null}
+  "version": "<kit version>",
+  "bundled": {"guide": "1.0.0-rc.5", "guide_it": true, "specification": null,
+              "registry": "<registry version>", "ai_coordinator_profile": "<profile version>",
+              "tools": null}
 }
 ```
 
-`null` means the kit does not contain that artifact: the kit ships the AI Coordinator profile and the
-registry, but neither the Guide nor the tools. `specification` is `"0.3"` when the historical
-specification is supplied to the build. `"unknown"` would mean the artifact is in the kit but its version
-source was missing in the checkout used.
+`guide_commit` and `guide_version` record the commit of the `guide` repository the build used and the
+version read from the title block of the English Guide. In `kit.bundled`, `guide` is the version of the
+English Guide when the kit contains it, and `guide_it` is `true` when the kit contains the Italian
+translation (the pinned guide commit has it) and `false` otherwise. `null` means the kit does not contain
+that artifact: the kit no longer ships the historical specification 0.3 (`specification` is always
+`null`), and it does not ship the tools. `"unknown"` would mean the artifact is in the kit but its version
+source was missing in the checkout used. The registry is recorded by `registry_commit` and `publishable`
+(RELEASING.md, online verification).
 
 When a pinned SHA moves to a new release, the pull request names the released version in a comment next
 to the SHA and in the changelog.
@@ -203,4 +225,4 @@ to the SHA and in the changelog.
 | The Guide was published as "1.0-rc" | Normalised to `1.0.0-rc.1` |
 | No release of 25 November 2026 was tagged | Each changelog gives the published commit; the tag of that version is applied retroactively to it (Guide excepted: `v1.0.0-rc.1` goes on its 26 November 2026 release commit) |
 | Tags are annotated but not signed, while GOVERNANCE §7 requires signed tags with a manifest | Closed when the signing key is set up by the Steward; from then on every tag is signed |
-| The `metodo` field of the profiles named only "Eiraman 0.3" | Closed with registry 0.6.0: every profile names the Guide version it follows alongside the specification 0.3 |
+| The `metodo` field of the profiles named only "Eiraman 0.3" | Closed with registry 0.6.0: every profile names the Guide version it follows alongside the specification 0.3; from registry 0.11.0 the field names only the Guide |
