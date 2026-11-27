@@ -30,7 +30,7 @@ repository, which carries the translation.
 ### Changed
 
 - `PATHWAYS.md`: every operative reference to the specification 0.3 now cites the section of the Guide
-  1.0.0-rc.5; the convention "How to read the references" and the open point on numbering are rewritten.
+  1.0.0-rc.6; the convention "How to read the references" and the open point on numbering are rewritten.
   Where the Guide has no counterpart (open points of the levels, the interface for the Human Manager,
   strategies for local and external requests) the text says so.
 - `PATHWAYS.md` §5, `WORKING-GROUPS.md` §4, `GOVERNANCE.md` (language note): English is canonical and
@@ -40,8 +40,28 @@ repository, which carries the translation.
 - `VERSIONING.md` section 5 and example: the field `metodo` of the profiles is "The Eiraman Guide
   <version>[; §…]"; the manifest records `guide_commit`, `guide_version` and `kit.bundled.guide`/`guide_it`,
   and the kit no longer carries the specification 0.3.
-- `LICENSING.md`, `TRADEMARK.md`: "Guide v1.0" becomes "the Eiraman Guide" or the version 1.0.0-rc.5.
+- `LICENSING.md`, `TRADEMARK.md`: "Guide v1.0" becomes "the Eiraman Guide" or the version 1.0.0-rc.6.
 - `CASE-STUDY-TEMPLATE.md`: references to the specification 0.3 replaced by sections of the Guide.
+- Target version: the whole release is aligned to the Guide 1.0.0-rc.6 (decision D-031 of the Human Manager), not
+  rc.5. The Guide 1.0.0-rc.6 carries RFC 0006 and the paragraph §15 "Measuring the method"; it is released "not
+  measured". The translation is `1.0.0-rc.6+it.1`. The version numbers in `LICENSING.md`, `TRADEMARK.md`,
+  `PATHWAYS.md` and the examples of `VERSIONING.md` follow. The version of this release does not change: it is
+  still an unreleased candidate.
+- `VERSIONING.md` section 1: the table lists the candidate versions of the release (Guide 1.0.0-rc.6, translation
+  1.0.0-rc.6+it.1, framework 0.3.0, registry 0.11.0, AI Coordinator 0.13.0, Digital Seniority map 0.2.1, local
+  engines map 0.1.1, tools 0.4.0, site 0.11.0, kit 0.10.0, community 0.6.0, `.github` 0.3.0) and the distribution of
+  the versions of the 49 profiles and of the three templates, from the registry changelog (0.11.0, "Profile
+  versions"); a note says that they are not released until each artifact is published. The table is confirmed at
+  publication.
+
+### Added (candidate follow-up)
+
+- `VERSIONING.md` section 1 and 2.2: the family files (`FAMIGLIA.md`) are artifacts with a version of their own
+  (governo and analisi-funzionale 0.5.0; aws, azure, finops and sviluppo 0.4.0; databricks and web-design 0.3.0),
+  with the bump rule: MINOR when a limit or a rule is added, PATCH for references, MAJOR (breaking while at
+  `0.y.z`) when a rule or a limit is removed or reversed. From an observation of the independent review.
+- `VERSIONING.md` section 2.7: a version of the method is declared "not measured" until its measurement campaign
+  is completed (Guide §15, "Measuring the method"); a reference to the Guide, the rule is not repeated.
 
 ## [0.5.0] - 2026-11-27
 

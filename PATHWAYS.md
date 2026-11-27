@@ -19,7 +19,7 @@ Every pathway ends in the same progression to reviewer and maintainer (§9).
 
 ## How to read the references
 
-- *Guide §n* is a section of the English *Eiraman Guide* (`EIRAMAN-GUIDE.md`, version 1.0.0-rc.5), the normative text; a bold label after the number names the paragraph. The Italian specification 0.3 is historical and non-normative: this document no longer cites it for a rule.
+- *Guide §n* is a section of the English *Eiraman Guide* (`EIRAMAN-GUIDE.md`, version 1.0.0-rc.6), the normative text; a bold label after the number names the paragraph. The Italian specification 0.3 is historical and non-normative: this document no longer cites it for a rule.
 - *GOV*, *CON*, *WG*, *SEC* are [GOVERNANCE.md](GOVERNANCE.md), [CONTRIBUTING.md](https://github.com/eiraman/.github/blob/main/CONTRIBUTING.md), [WORKING-GROUPS.md](WORKING-GROUPS.md) and [SECURITY.md](https://github.com/eiraman/.github/blob/main/SECURITY.md).
 - *Registry* is the Role Profile registry (repository `role-profiles`). It currently has 49 profiles in 8 families, all in state *draft* ("bozza non qualificata"), and the folder names are still in Italian. The English names (`PROFILE.md`, `profile.json`, `FAMILY.md`) are an open point owned by DevSecOps & Tooling (WG §5).
 - **Applicability levels are 0, 1 and 2** (Guide §14, §14.1). Level 0 is personal use, level 1 an internal team, level 2 external users. "Raising applicability" means making levels 1 and 2 reachable with evidence and keeping level 0 safe.
@@ -296,6 +296,6 @@ Every role holder keeps a public declaration of employer and commercial interest
 
 ## 10. Open points
 
-- The references to the Guide use the section numbers of 1.0.0-rc.5. A change of numbering in a later release of the Guide requires them to be updated (package GUIDE-CORE). Where the specification 0.3 had content that the Guide does not carry (the list of open points of the levels, the interface for the Human Manager, the strategies for local and external requests), the text says so.
+- The references to the Guide use the section numbers of 1.0.0-rc.6. A change of numbering in a later release of the Guide requires them to be updated (package GUIDE-CORE). Where the specification 0.3 had content that the Guide does not carry (the list of open points of the levels, the interface for the Human Manager, the strategies for local and external requests), the text says so.
 - Candidate families (GCP, SAP, mainframe, regulated data) and their publishing domains are proposals until an RFC is accepted.
 - Repository names (`guide`, `framework`, `role-profiles`, `tools`, `site`, `community`) follow the repository plan and are not created yet.

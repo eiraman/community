@@ -35,7 +35,7 @@ The copies in `LICENSES/` are taken, at release time, from these canonical sourc
 
 **Guide (CC BY-SA 4.0).** The attribution is "The Eiraman Guide by Paolo Ungari and contributors"; copyright lines read "2026 Paolo Ungari and contributors". Give the title, author, source and licence, and say whether you changed it. If you share an adapted version, you must license your adaptation under CC BY-SA 4.0 (or a later version, or a licence Creative Commons has declared compatible).
 
-> *The Eiraman Guide* 1.0.0-rc.5 by Paolo Ungari and contributors, https://eiraman.tech, licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Changes: translated into French and shortened.
+> *The Eiraman Guide* 1.0.0-rc.6 by Paolo Ungari and contributors, https://eiraman.tech, licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Changes: translated into French and shortened.
 
 **Role Profiles (CC BY 4.0).** Give the profile name and version, author, source and licence, and say whether you changed it. You may choose the terms for your own changes in an adaptation, and you are not required to share it. If you share it, keep the attribution, and do not choose terms that prevent recipients from complying with CC BY 4.0 for the original material (CC BY 4.0, section 3(a)(4)); you may not add terms or technical measures that restrict their rights in the original (section 2(a)(5)(B)).
 

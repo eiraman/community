@@ -29,7 +29,7 @@ Together, the "Marks". Paolo Ungari, the project Steward (the "Steward"), claims
 ## 3. Uses that need no permission
 
 1. **Reference.** Saying true things about Eiraman in articles, books, talks, courses, documentation, research and social media, for example "our team applies the Eiraman Guide" or "an introduction to Eiraman".
-2. **Compatibility.** Accurate statements such as "<product> is compatible with Eiraman Role Profiles" or "<tool> for Eiraman", as long as they do not suggest the product is official. The statement must refer to a specific version of the Guide or of the Role Profile format, for example "compatible with Eiraman Guide 1.0.0-rc.5".
+2. **Compatibility.** Accurate statements such as "<product> is compatible with Eiraman Role Profiles" or "<tool> for Eiraman", as long as they do not suggest the product is official. The statement must refer to a specific version of the Guide or of the Role Profile format, for example "compatible with Eiraman Guide 1.0.0-rc.6".
 3. **Derived works under the open licences.** Saying that your work is "based on the Eiraman Guide" or "adapted from an Eiraman Role Profile", as part of the attribution the licences require. A modified version must not be presented as the Eiraman Guide itself or as an official Role Profile.
 4. **Community events and groups.** Free, non-commercial meetups, study groups, workshops and online communities that discuss Eiraman, named for example "Milan Eiraman meetup" or "AI governance day featuring Eiraman". Say on the event page that it is a community event, not organised by the project.
 5. **Repositories and packages.** Names such as `eiraman-profile-<topic>` or `<tool>-eiraman` for projects that work with Eiraman, provided their description does not claim official status.

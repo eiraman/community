@@ -23,20 +23,25 @@ heading of the repository's `CHANGELOG.md` must equal it (RELEASING.md, step 2).
 
 | Artifact | Repository | Version source | Current version |
 |---|---|---|---|
-| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.5` |
-| Italian translation of the Guide | `guide`, `translations/it/` | The "Nota alla traduzione" at the top of `EIRAMAN-GUIDE.it.md`; its own changelog is `translations/it/CHANGELOG.md` | none released yet; the first is `1.0.0-rc.5+it.1`, released together with the next release of the `guide` repository |
+| The Eiraman Guide | `guide` | Title block of `EIRAMAN-GUIDE.md` ("Version …") | `1.0.0-rc.6` |
+| Italian translation of the Guide | `guide`, `translations/it/` | The "Nota alla traduzione" at the top of `EIRAMAN-GUIDE.it.md`; its own changelog is `translations/it/CHANGELOG.md` | `1.0.0-rc.6+it.1` |
 | Historical specification 0.3 | `guide`, `history/` | Frozen copy, non-normative; no further versions | `0.3` |
-| Extended Framework | `framework` | `CHANGELOG.md` | `0.2.1` |
-| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.0` (35 profiles), `0.3.0` (8 profiles: scrum-master-ai, technical-writer, utente-simulato, finops-forecast-budget, revisore-legale-compliance, revisore-architettura-cloud, revisore-architettura-applicativa-dati, revisore-test-qualita), `0.4.0` (5 profiles: analista-funzionale, revisore-ai, revisore-privacy, revisore-sicurezza, security-officer), `0.7.0` (facilitatore-design-thinking); the 49 profiles are followed by three templates: business-analyst `0.3.0`, user-persona `0.4.0`, `_modello/profilo.json` `0.2.0` |
-| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.12.0` |
-| Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.2.0` |
-| Local engines map | `role-profiles`, `_seniority/` | Field `versione` of `motori-locali.json` | `0.1.0` |
-| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.10.0` |
-| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.3.2` |
-| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.10.2` |
-| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.9.0` |
-| Community documents | `community` | `CHANGELOG.md` | `0.5.0` |
-| Organisation defaults | `.github` | `CHANGELOG.md` | `0.2.1` |
+| Extended Framework | `framework` | `CHANGELOG.md` | `0.3.0` |
+| Each Role Profile | `role-profiles` | Field `versione` of `profilo.json`; the `Versione` line of `PROFILO.md` repeats it and must match | `0.2.1` (32 profiles), `0.3.0` (3: aws-operations, aws-security-engineer, databricks-ml-engineer), `0.3.1` (8: scrum-master-ai, technical-writer, utente-simulato, finops-forecast-budget, revisore-legale-compliance, revisore-architettura-cloud, revisore-architettura-applicativa-dati, revisore-test-qualita), `0.4.1` (4: analista-funzionale, revisore-privacy, revisore-sicurezza, security-officer), `0.5.0` (revisore-ai), `0.8.0` (facilitatore-design-thinking); the 49 profiles are followed by three templates: business-analyst `0.3.1`, user-persona `0.4.1`, `_modello/profilo.json` `0.2.1` |
+| Each family file (`FAMIGLIA.md`) | `role-profiles` | The `Versione` line of the `FAMIGLIA.md` of the family | `0.5.0` (governo, analisi-funzionale), `0.4.0` (aws, azure, finops, sviluppo), `0.3.0` (databricks, web-design) |
+| AI Coordinator profile | `role-profiles`, `controllore/` | `Versione` line of `CONTROLLORE.md` | `0.13.0` |
+| Digital Seniority map | `role-profiles`, `_seniority/` | Field `versione` of `seniority.json` | `0.2.1` |
+| Local engines map | `role-profiles`, `_seniority/` | Field `versione` of `motori-locali.json` | `0.1.1` |
+| Role Profiles registry, as a whole | `role-profiles` | `CHANGELOG.md` | `0.11.0` |
+| Tools | `tools` | `__version__` in each tool, printed by `--version`; one version for the repository | `0.4.0` |
+| Website eiraman.tech | `site` | `version` in `manifest.json`, set by `SITE_VERSION` in `generator/build.py` | `0.11.0` |
+| Kit (`kit/eiraman-kit.zip`) | `site` | `kit.version` in `manifest.json`, set by `KIT_VERSION` in `generator/build.py` | `0.10.0` |
+| Community documents | `community` | `CHANGELOG.md` | `0.6.0` |
+| Organisation defaults | `.github` | `CHANGELOG.md` | `0.3.0` |
+
+The versions of this table are the candidates of the release that targets the Guide 1.0.0-rc.6 (decision D-031): they
+are not released until each artifact is published, and the AI Coordinator confirms them at publication. `community`
+is published after all the other artifacts.
 
 Notes:
 
@@ -46,7 +51,7 @@ Notes:
 - **Italian translation of the Guide.** The Italian text is the curated translation of the Guide, approved by
   the Author (decision D-IT-1); the English text is canonical and prevails. Its version is the version of
   the English Guide it translates followed by the build metadata `+it.N` (SemVer 2.0.0, section 10), for
-  example `1.0.0-rc.5+it.1`. `N` is the revision of the translation of that source version, numbered from 1:
+  example `1.0.0-rc.6+it.1`. `N` is the revision of the translation of that source version, numbered from 1:
   a fix to the translation of the same source increments `N`, and the translation of a new Guide version
   restarts at `+it.1`. Build metadata does not take part in SemVer precedence, so the revisions are
   ordered by `N` by convention, not by SemVer rules, and the translation never ranks above or below its
@@ -100,6 +105,10 @@ change of state alone does not bump the version; it is recorded in the profile a
 Every new version of a profile, whatever its number, is published by a domain reviewer under
 GOVERNANCE §4.5.
 
+A **family file** (`FAMIGLIA.md`, the rules a family adds to its profiles) follows the same logic: MINOR when a
+limit or a rule is added (for example the paragraph on the local engine), PATCH for corrected references and
+wording that keep the meaning, MAJOR (**breaking** while at `0.y.z`) when a rule or a limit is removed or reversed.
+
 The **registry** version takes the largest bump among the changes it releases: removing a profile, or a
 change to `_modello/` or `seniority.json` that makes existing profiles fail the validator, is MAJOR;
 adding a profile or a family, or any profile's MINOR, is MINOR; otherwise PATCH. The Digital Seniority map
@@ -142,6 +151,12 @@ Most artifacts are at `0.y.z`, the initial development stage. While at `0.y.z`, 
 MAJOR bumps MINOR, and the changelog marks it as **breaking**; everything else bumps PATCH or MINOR as
 above. An artifact moves to `1.0.0` when its owner declares it stable; the Guide is published by the Author
 with a second reviewer (GOVERNANCE §7).
+
+### 2.7 Measurement of the method
+
+A version of the method is declared "not measured" until its measurement campaign is completed (Guide §15,
+"Measuring the method"). The measurement does not change a version number. The Guide 1.0.0-rc.6 is released "not
+measured".
 
 ## 3. Pre-release labels
 
@@ -187,7 +202,7 @@ gives their commit.
 | `role-profiles` CI | Tools | `TOOLS_REF` in `validate-profiles.yml`, the full commit SHA of a tools release |
 | `tools` CI | Registry | `PROFILES_REF` in `tests.yml`, the full commit SHA of a registry release |
 | `site` CI and build | Registry | `profiles.ref`, the full commit SHA of a registry release, with the registry version in a comment; read by `site-build.yml` and by `generator/build.py`, which refuses another checkout |
-| Each Role Profile | Method | Field `metodo` of `profilo.json`: "The Eiraman Guide <version>", optionally followed by "; §…" with the sections of the Guide the profile applies, for example "The Eiraman Guide 1.0.0-rc.5; §11" (from registry 0.11.0; the specification 0.3 is no longer named) |
+| Each Role Profile | Method | Field `metodo` of `profilo.json`: "The Eiraman Guide <version>", optionally followed by "; §…" with the sections of the Guide the profile applies, for example "The Eiraman Guide 1.0.0-rc.6; §11" (from registry 0.11.0; the specification 0.3 is no longer named) |
 | Extended Framework | Guide | The Guide version it is written against, stated in its `CHANGELOG.md` for each release |
 | Compatibility claims | Guide or profile format | A specific version, as TRADEMARK.md requires |
 
@@ -195,11 +210,11 @@ Example, the fields of the site manifest that name other artifacts (values are i
 
 ```json
 "guide_commit": "<commit of the guide repository the build used>",
-"guide_version": "1.0.0-rc.5",
+"guide_version": "1.0.0-rc.6",
 "kit": {
   "path": "kit/eiraman-kit.zip",
   "version": "<kit version>",
-  "bundled": {"guide": "1.0.0-rc.5", "guide_it": true, "specification": null,
+  "bundled": {"guide": "1.0.0-rc.6", "guide_it": true, "specification": null,
               "registry": "<registry version>", "ai_coordinator_profile": "<profile version>",
               "tools": null}
 }
